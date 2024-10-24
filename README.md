@@ -1,27 +1,14 @@
-# Master Thesis: Leveraging Multi-lingual FAQ Resources for Enhanced Cross-Lingual Information Retrieval
+# Leveraging Multi-lingual FAQ Resources for Enhanced Cross-Lingual Information Retrieval
 
-## Abstract
-Existing research on cross-lingual information retrieval suggests reliance on
+Existing research on cross-lingual information retrieval suggested reliance on
 neural machine translation to translate either one of user queries to the target
 language, or target database to source language. Additionally, the lack of
 cross-lingual retrieval data for low-resource languages makes training consistent
 retrieval models more challenging. This thesis investigates the enhancement of
 cross-lingual retrieval question answering (QA) systems through the utilization
-of a cross-lingually aligned Frequently Asked Questions (FAQ) dataset, with
-the primary objective being the improvement of the passage-based retrieval
-performance of a system when presented with a question in one language and
-a database of prospective answers in another. Our study involves extraction
-and cross lingual alignment of semantically equivalent FAQ pairs from a multilingual
-FAQ dataset, as an alternative to machine translation. We introduce
-and investigate the effects of cross-lingual passage-level relevance data for
-finetuning and query-document style pretraining. The findings of this thesis
-underscore the potential of diverse multilingual knowledge sources in enhancing
-the performance of cross-lingual retrieval systems. Our trained models demonstrate
-marginal improvements over common multilingual reranking baselines
-like XLM-R, mBERT. Additionally, the competitive performance of models
-trained without explicit cross-lingual supervision highlights the necessity for
-further research into sentence mining to maintain the validity of questions and
-answers across languages.
+of a cross-lingually aligned Frequently Asked Questions (FAQ) dataset.
+
+Our study involved training models for CLIR using FAQ resources (MFAQ dataset) using cross-lingual supervision of question aligned with answers in different languages, and without such supervision.
 
 ## MFAQ Dataset
 The MFAQ dataset is hosted on the HuggingFace hub. You can find it [here](https://huggingface.co/datasets/clips/mfaq).
