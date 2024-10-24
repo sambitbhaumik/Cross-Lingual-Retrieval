@@ -1,10 +1,3 @@
-#!/usr/bin/env bash
-
-# run setup
-source /data/users/sbhaumik/mfaq/setup.sh
-source /data/users/sbhaumik/mfaq/rename_gpus.sh
-
-# run misc. stuff
 echo $CUDA_VISIBLE_DEVICES
 
 # For laser embeddings
