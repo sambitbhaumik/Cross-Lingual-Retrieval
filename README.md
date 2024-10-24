@@ -8,7 +8,19 @@ retrieval models more challenging. This thesis investigates the enhancement of
 cross-lingual retrieval question answering (QA) systems through the utilization
 of a cross-lingually aligned Frequently Asked Questions (FAQ) dataset.
 
-Our study involved training models for CLIR using FAQ resources (MFAQ dataset) using cross-lingual supervision of question aligned with answers in different languages, and without such supervision.
+Our study involved training models for CLIR using FAQ resources (MFAQ dataset) using cross-lingual supervision of questions aligned with answers in different languages, and without such supervision.
+
+## Brief Overview of Project
+1. Bi-text mining of cross-lingual aligned semantically similar FAQ pairs from the MFAQ dataset
+    - tuning thresholds for mining
+    - using different methodologies to optimize mining
+      
+2. Training models using a shared encoder model on the datasets
+3. Evaluating in a two-stage hybrid retrieval system on MRR@10 on evaluation sets curated from MLQA evaluation benchmark and mMARCO cross lingual datasets
+    - used base rankers like Tf-IDF, BM25 and random selection for first stage
+    - trained models for second stage neural re-ranking
+  
+Paper will be added shortly.   
 
 ## MFAQ Dataset
 The MFAQ dataset is hosted on the HuggingFace hub. You can find it [here](https://huggingface.co/datasets/clips/mfaq).
@@ -34,7 +46,7 @@ https://huggingface.co/datasets/unicamp-dl/mmarco
 
 ## Scripts
 
-`run.sh` has examples for running different scripts and files related to the thesis project:
+`run.sh` has examples for running different scripts and files related to the project:
 
 - `para-train.sh` for training on parallel FAQs (XLFAQ) and `train.sh` for training on MFAQ
 - `tune.sh` for tuning on different language pairs
